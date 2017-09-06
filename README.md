@@ -8,7 +8,7 @@ When changes are pushed to this repository, it may take between 15 - 30 minutes 
 
 ## Software stack
 
-The website is written in [Jekyll](https://jekyll-rb.com), which will generate a static HTML site to be served.
+The website is written in [Jekyll](https://jekyllrb.com), which will generate a static HTML site to be served.
 
 This allows pages to be templated out, and basic logic to be performed to build sites which have a limited attack vector and can be served fully from cache.
 
