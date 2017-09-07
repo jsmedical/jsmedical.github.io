@@ -24,7 +24,7 @@ paginate_path: "/news/page/:num/"
 excerpt_separator: <!--more-->
 
 # Exclusions
-exclude: ["README.md", "CNAME", ".gitignore", ".gitlab-ci.yml"]
+exclude: ["README.md", "CNAME", ".gitignore", ".gitlab-ci.yml", ".gitkeep", "Gemfile", "Gemfile.lock"]
 
 # Plugins
 gems:
