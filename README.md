@@ -22,9 +22,9 @@ The repository in GitLab is synchronised with every push (and every 15 minutes) 
 
 Making a push to the `master` branch of the GitLab repo will trigger **both** a pipeline to build a new copy of the site at GitLab Pages, and a push to GitHub with a subsequent build of the site at GitHub Pages.
 
-Pushing changes to the GitHub repo would cause the sites to become our of sync, and for the most part, you should only have write access to GitLab.
+Pushing changes to the GitHub repo would cause the sites to become out of sync, and for the most part, you should only have write access to GitLab.
 
-Failed pipelines should signify a failed build on both GitHub and GitLab - but in the even of a failed pipeline, please make every endeavour to either correct the issue to a pass, or revert your commit.
+Failed pipelines should signify a failed build on both GitHub and GitLab - but in the event of a failed pipeline, please make every endeavour to either correct the issue to a pass, or revert your commit.
 
 If you discover an issue or have a query, please log an issue in the GitLab repository.
 
