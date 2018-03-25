@@ -1,0 +1,53 @@
+{% comment %} THE FOLLOWING HANDLES FILE VERSIONING THROUGHOUT THE SITE {% endcomment %}   {% if site.github %}{% assign generator = "Jekyll/GitHub" %}{% assign revision = site.github.build_revision %}{% else %}{% assign generator = "Jekyll/GitLab" %}{% assign revision = site.git.last_commit.long_sha %}{% endif %}  {% assign rev = revision | truncate: 10, "" %}
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/WebPage">
+
+<!-- Begin head -->
+<head>
+    <title>{% if page.title %}{{page.title}} - {% endif %}JS Medical{% if page.title == false %} - Developing modern solutions for the medical field{% endif %}</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="generator" content="{{ generator }}">
+    <meta name="revision" content="{{ revision }}">
+
+    <!-- Bootstrap -->
+    <link href="{{ site.assets }}css/bootstrap.min.css?v={{ rev }}" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" crossorigin="anonymous">
+
+    <!-- Application CSS -->
+    <link href="{{ site.assets }}css/main.css?v={{ rev }}" rel="stylesheet" /> <!-- Main global CSS -->
+    {% for css in page.css %}<link href="{{ css }}?v={{ rev }}" rel="stylesheet" /> <!-- Custom page CSS -->{% endfor %}
+</head>
+<!-- End head -->
+
+<!-- Begin body -->
+<body>
+
+{% include nav.html %}
+
+<!-- START PAGE CONTENT -->
+{{ content }}
+<!-- END PAGE CONTENT -->
+
+<!-- Begin footer -->
+{% include footer.html %}
+<!-- End footer -->
+
+    <!-- Begin Javascript -->
+    <script src="{{ site.assets }}js/jquery-3.2.1.slim.min.js?v={{ rev }}"></script> <!-- jQuery -->
+    <script src="{{ site.assets }}js/bootstrap.min.js?v={{ rev }}"></script> <!-- Bootstrap JS -->
+    <script src="{{ site.assets }}js/main.js?v={{ rev }}"></script> <!-- Application JS -->
+    {% for js in page.js %}
+    <script src="{{ js }}?v={{ rev }}"></script> <!-- Custom page JS -->
+    {% endfor %}
+    <!-- End Javascript -->
+
+</body>
+<!-- End body -->
+
+</html>

@@ -1,0 +1,15 @@
+- title: Home
+  url: /
+  icon: false
+
+- title: About us
+  url: /about/
+  icon: false
+
+- title: Projects
+  url: /projects/
+  icon: false
+
+- title: Contact
+  url: /contact/
+  icon: false
